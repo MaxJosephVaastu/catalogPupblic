@@ -63,7 +63,7 @@ class EditProductModal extends React.Component {
                     this.setState({ [field]: value });
                 }
                 const date = new Date(dateArr[2], dateArr[1] - 1, dateArr[0])
-                if (new Date().getTime() >= date.getTime()) {
+                if (dateArr[0] > 31 || dateArr[1] > 12 || new Date().getTime() >= date.getTime()) {
                     this.setState({dateIsValid: false})
                 }
                 else {
@@ -142,7 +142,7 @@ class EditProductModal extends React.Component {
                         </Form.Group>
 
                         <Form.Group as={Row} controlId="formDate">
-                            <Form.Label column sm={4}>Цена</Form.Label>
+                            <Form.Label column sm={4}>Дата</Form.Label>
                             <Col sm={8}>
                                 <Form.Control
                                     name = "expirationDate"
