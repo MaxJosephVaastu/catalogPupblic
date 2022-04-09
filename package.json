@@ -12,7 +12,7 @@
     "redux-actions": "^2.6.5",
     "redux-logger": "^3.0.6",
     "redux-thunk":"^2.3.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "scripts": {
     "start": "react-scripts start",
